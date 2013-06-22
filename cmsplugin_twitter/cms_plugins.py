@@ -1,4 +1,4 @@
-from cms.plugin_base import CMSPluginBase
+from cmss.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 from django.utils.translation import ugettext_lazy as _
 
@@ -13,7 +13,7 @@ class TwitterPlugin(CMSPluginBase):
     def render(self, context, instance, placeholder):
         context.update({
             'object': instance,
-        })
+            })
         return context
 
 plugin_pool.register_plugin(TwitterPlugin)
