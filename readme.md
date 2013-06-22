@@ -1,5 +1,7 @@
 ##About
 
+[![Build Status](https://travis-ci.org/vinitcool76/cmsplugin-twitter.png?branch=master)](https://travis-ci.org/vinitcool76/cmsplugin-twitter)
+
 Twitter recently dropped support for v1.0 of it's REST API. Since this was used in DjangoCMS. All of the installation which used this plugin broke. 
 Hence, this is an attempt to create a similar plugin using widgets.
 
