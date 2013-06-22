@@ -3,9 +3,35 @@
 Twitter recently dropped support for v1.0 of it's REST API. Since this was used in DjangoCMS. All of the installation which used this plugin broke. 
 Hence, this is an attempt to create a similar plugin using widgets.
 
-```
-<a class="twitter-timeline" href="https://twitter.com/twitterapi" data-widget-id="YOUR-WIDGET-ID-HERE" data-theme="dark" data-link-color="#cc0000"  data-related="twitterapi,twitter" data-aria-polite="assertive" width="300" height="500" lang="EN">Tweets by @twitterapi</a>
-```
 
-So, this is central piece of code that this plugin would be based on.
+##Installation
+
+- In order to install this plugin, fire up your virtualenv:
+
+	```bash
+		pip install cmsplugin-twitter
+	```
+
+- And add the this line in installed apps in your base.py
+
+	```python
+		'cmsplugin-twitter',
+	```
+
+- After saving them , run:
+
+	```bash
+		python manage.py syncdb
+		python manage.py migrate
+	```
+	
+##How to Use:
+
+- Login to your `twitter` account and go to this url: `https://twitter.com/settings/widgets`
+
+- Create a new widgets and then copy the `twitter handle ` and ` widget_id` from the generated script. 
+
+- Enter those two fields in the plugin form and other fields and you are good to go.
+
+Enjoy!
 
