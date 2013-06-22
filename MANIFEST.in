@@ -1,0 +1,3 @@
+recursive-include cmsplugin_twitter/templates *
+recursive-include cmsplugin_twitter/static *
+include readme.md
