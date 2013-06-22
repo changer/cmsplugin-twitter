@@ -33,5 +33,16 @@ Hence, this is an attempt to create a similar plugin using widgets.
 
 - Enter those two fields in the plugin form and other fields and you are good to go.
 
+
+##Plugin in Action
+
+
+This is the plugin working on a Django-CMS site:
+
+
+![Twitter Plugin](twitter.png)
+
 Enjoy!
+
+
 
