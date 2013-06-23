@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-version = '1.0.0'
+version = '1.0.1'
 
 setup(
     name='cmsplugin-twitter',
@@ -9,6 +9,7 @@ setup(
     author='Vinit Kumar',
     author_email='vinit.kumar@changer.nl',
     url='http://github.com:vinitcool76/cmsplugin-twitter.git',
+    packages=find_packages(),
     zip_safe=False,
     include_package_data=True,
     install_requires=[
