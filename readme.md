@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/vinitcool76/cmsplugin-twitter.png?branch=master)](https://travis-ci.org/vinitcool76/cmsplugin-twitter)
 
-Twitter recently dropped support for v1.0 of it's REST API. Since this was used in DjangoCMS. All of the installation which used this plugin broke. 
+Twitter recently dropped support for v1.0 of its REST API. Since this was used in DjangoCMS, all of the installations which used this plugin broke.
 Hence, this is an attempt to create a similar plugin using widgets.
 
 
@@ -17,7 +17,7 @@ Hence, this is an attempt to create a similar plugin using widgets.
 - And add the this line in installed apps in your base.py
 
 	```python
-		'cmsplugin-twitter',
+		'cmsplugin_twitter',
 	```
 
 - After saving them , run:
@@ -26,12 +26,12 @@ Hence, this is an attempt to create a similar plugin using widgets.
 		python manage.py syncdb
 		python manage.py migrate
 	```
-	
+
 ##How to Use:
 
 - Login to your `twitter` account and go to this url: `https://twitter.com/settings/widgets`
 
-- Create a new widgets and then copy the `twitter handle ` and ` widget_id` from the generated script. 
+- Create a new widgets and then copy the `twitter handle ` and ` widget_id` from the generated script.
 
 - Enter those two fields in the plugin form and other fields and you are good to go.
 
