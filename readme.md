@@ -14,11 +14,68 @@ Hence, this is an attempt to create a similar plugin using widgets.
 		pip install cmsplugin-twitter
 	```
 
-- And add the this line in installed apps in your base.py
+- And add the this line in INSTALLED_APPS in your base.py
+```python
+INSTALLED_APPS = (
+    'south',
+    'geagort.apps.movies',
+    'geagort.apps.books',
+    'geagort.apps.blog',
+    'geagort.apps.linkedin',
 
-	```python
-		'cmsplugin_twitter',
-	```
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.sites',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+
+    'cms',
+    'cms.plugins.text',
+    'cms.plugins.picture',
+    'cms.plugins.link',
+    'cms.plugins.file',
+    'cms.plugins.snippet',
+    'cms.plugins.googlemap',
+    'sekizai',
+    'cmsplugin_twitter',
+    #'cms.plugins.teaser',
+    'menus',
+    'mptt',
+    'publisher',
+    'storages',
+    'boto',
+    'tinymce', 
+)
+```
+considering you have settings.py similar to this:
+```python
+import os
+import imp
+import socket
+import subprocess
+
+
+WEBAPP_ROOT = os.path.dirname(os.path.realpath(__file__))
+
+def get_environment_file_path(env):
+    return os.path.join(WEBAPP_ROOT, 'config', '%s.py' % env)
+
+config = imp.load_source('base_settings', get_environment_file_path('base'))
+from base_settings import *
+
+
+if 'APP_ENV' in os.environ:
+    ENV = os.environ['APP_ENV']
+else:
+    ENV = 'local'
+
+try:
+    config = imp.load_source('env_settings', get_environment_file_path(ENV))
+    from env_settings import *
+except IOError:
+    exit("No configuration file found for env '%s'" % ENV)
+```
 
 - After saving them , run:
 
