@@ -48,6 +48,7 @@ INSTALLED_APPS = (
 )
 ```
 considering you have settings.py similar to this:
+
 ```python
 import os
 import imp
