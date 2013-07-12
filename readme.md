@@ -18,10 +18,10 @@ Hence, this is an attempt to create a similar plugin using widgets.
 ```python
 INSTALLED_APPS = (
     'south',
-    'geagort.apps.movies',
-    'geagort.apps.books',
-    'geagort.apps.blog',
-    'geagort.apps.linkedin',
+    'project.apps.movies',
+    'project.apps.books',
+    'project.apps.blog',
+    'project.apps.linkedin',
 
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,7 +39,6 @@ INSTALLED_APPS = (
     'cms.plugins.googlemap',
     'sekizai',
     'cmsplugin_twitter',
-    #'cms.plugins.teaser',
     'menus',
     'mptt',
     'publisher',
