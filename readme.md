@@ -1,9 +1,8 @@
 ##About
 
-[![Downloads](https://pypip.in/d/cmsplugin-twitter/badge.png)](https://crate.io/package/cmsplugin-twitter)
 
-Twitter recently dropped support for v1.0 of its REST API. Since this was used in DjangoCMS, all of the installations which used this plugin broke.
-Hence, this is an attempt to create a similar plugin using widgets.
+Twitter dropped support for v1.0 of its REST API. Since this was used in DjangoCMS, all of the installations which used this plugin broke.
+Hence, this creates a twitter plugin using widgets.
 
 
 ##Installation
@@ -44,43 +43,14 @@ INSTALLED_APPS = (
     'publisher',
     'storages',
     'boto',
-    'tinymce', 
+    'tinymce',
 )
 ```
 considering you have settings.py similar to this:
 
-```python
-import os
-import imp
-import socket
-import subprocess
-
-
-WEBAPP_ROOT = os.path.dirname(os.path.realpath(__file__))
-
-def get_environment_file_path(env):
-    return os.path.join(WEBAPP_ROOT, 'config', '%s.py' % env)
-
-config = imp.load_source('base_settings', get_environment_file_path('base'))
-from base_settings import *
-
-
-if 'APP_ENV' in os.environ:
-    ENV = os.environ['APP_ENV']
-else:
-    ENV = 'local'
-
-try:
-    config = imp.load_source('env_settings', get_environment_file_path(ENV))
-    from env_settings import *
-except IOError:
-    exit("No configuration file found for env '%s'" % ENV)
-```
-
-- After saving them , run:
+- After saving them , run migrations:
 
 	```bash
-		python manage.py syncdb
 		python manage.py migrate
 	```
 
@@ -98,11 +68,7 @@ except IOError:
 
 This is the plugin working on a Django-CMS site:
 
-
 ![Twitter Plugin](twitter.png)
 
 Enjoy!
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/changer/cmsplugin-twitter/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
 
