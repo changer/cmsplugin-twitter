@@ -7,7 +7,8 @@ from .models import Twitter
 
 class TwitterPlugin(CMSPluginBase):
     model = Twitter
-    name = _("Twitter feed Plugin")
+    name = _("Twitter tijdlijn")
+    module = "Social Schools"
     render_template = "cmsplugin_twitter/plugin.html"
 
     def render(self, context, instance, placeholder):
