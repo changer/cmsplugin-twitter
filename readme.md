@@ -1,19 +1,20 @@
-##About
+## About
 
 
 Twitter dropped support for v1.0 of its REST API. Since this was used in DjangoCMS, all of the installations which used this plugin broke.
 Hence, this creates a twitter plugin using widgets.
 
 
-##Installation
+## Installation
 
-- In order to install this plugin, fire up your virtualenv:
+In order to install this plugin, fire up your virtualenv:
 
-	```bash
-		pip install cmsplugin-twitter
-	```
+```bash
+    pip install cmsplugin-twitter
+```
 
-- And add the this line in INSTALLED_APPS in your base.py
+And add the this line in INSTALLED_APPS in your base.py
+
 ```python
 INSTALLED_APPS = (
     'south',
@@ -50,11 +51,11 @@ considering you have settings.py similar to this:
 
 - After saving them , run migrations:
 
-	```bash
-		python manage.py migrate
-	```
+```bash
+    python manage.py migrate
+```
 
-##How to Use:
+## How to Use:
 
 - Login to your `twitter` account and go to this url: `https://twitter.com/settings/widgets`
 
@@ -63,7 +64,7 @@ considering you have settings.py similar to this:
 - Enter those two fields in the plugin form and other fields and you are good to go.
 
 
-##Plugin in Action
+## Plugin in Action
 
 
 This is the plugin working on a Django-CMS site:
