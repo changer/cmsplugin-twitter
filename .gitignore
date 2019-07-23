@@ -38,3 +38,5 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+*.py.bak
+.mypy_cache/
